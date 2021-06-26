@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './service/login.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo03';
+  title:string="";
+  constructor(private loginService: LoginService) {
+  }
+
+  cerrar() {
+    sessionStorage.clear();
+  }
+  verificar() {
+    return this.loginService.verificar();
+  }
 }
+

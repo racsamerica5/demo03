@@ -1,0 +1,23 @@
+<h1>Propietario</h1>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput  placeholder="idPropietario" [(ngModel)]="propietario.idPropietario">
+</mat-form-field>
+
+<br>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="propietario.namePropietario">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput required placeholder="name" [(ngModel)]="propietario.emailPropietario">
+</mat-form-field>
+
+<br>
+<button mat-raised-button color="warn" (click)="aceptar()">Aceptar</button>
+<button mat-raised-button color="accent" routerLink="/propietarios">Cancelar</button>
+<p>{{mensaje}}</p>
